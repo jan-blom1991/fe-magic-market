@@ -5,7 +5,12 @@
   "projects": {
     "fe-magic-market": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "skipTests": true,
+          "styleext": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -24,8 +29,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles/main.scss",
+              "src/styles/theme.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -88,8 +99,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles/main.scss",
+              "src/styles/theme.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "scripts": []
           }
         },

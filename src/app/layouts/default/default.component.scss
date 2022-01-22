@@ -1,0 +1,21 @@
+@import "theme-variables";
+
+.main-container {
+  max-width: 90rem;
+  margin: auto;
+  height: 100%;
+}
+
+mat-drawer {
+  width: 15rem;
+  background-color: mat-color($accent, 700);
+}
+
+.drawer-container {
+  height: 100%;
+}
+
+.drawer-content {
+  height: 100%;
+  padding: 1rem;
+}

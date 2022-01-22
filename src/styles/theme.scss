@@ -1,0 +1,10 @@
+@import 'node_modules/@angular/material/theming';
+@import "src/styles/theme-variables";
+//@import "./fonts/fonts.css";
+
+@include mat-core();
+
+$light-theme: mat-light-theme($light-primary, $light-accent, $light-warn);
+$dark-theme: mat-light-theme($dark-primary, $dark-accent, $dark-warn);
+
+@include angular-material-theme($light-theme);

@@ -1,0 +1,57 @@
+<div class="top-actions-container">
+  <button mat-button color="primary">
+    <mat-icon>keyboard_return</mat-icon>
+    <span style="padding-left: 0.3rem">Return</span>
+  </button>
+</div>
+<div class="maintain-product-container">
+  <div class="form-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Category</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <textarea matInput style="height: 8rem"></textarea>
+    </mat-form-field>
+    <div class="grid-two-columns">
+      <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>Stock</mat-label>
+        <input matInput type="number" placeholder="0">
+      </mat-form-field>
+      <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>Price</mat-label>
+        <input matInput type="number" placeholder="0">
+        <span matPrefix>€&nbsp;</span>
+      </mat-form-field>
+    </div>
+    <div>
+      <button mat-flat-button color="primary" id="file-button" (click)="activateFileInput()">
+        <mat-icon>file_upload</mat-icon>
+        <span style="padding-left: 0.3rem">Upload an image</span>
+      </button>
+      <input type="file" id="file-input" hidden="hidden" (change)="uploadFile($event)" accept="image/*">
+    </div>
+  </div>
+  <div>
+    <div class="mat-card-container">
+      <mat-card *ngFor="let image of images; let i = index; let last = last">
+        <img src="{{image.url}}" alt="">
+        <button mat-icon-button color="primary" (click)="removeImage(i)">
+          <mat-icon>delete_outline</mat-icon>
+        </button>
+        <button mat-icon-button color="primary" (click)="openDialog(i)">
+          <mat-icon>zoom_in</mat-icon>
+        </button>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<div class="bottom-actions-container">
+  <button mat-flat-button color="primary">Save</button>
+  <mat-checkbox color="primary">Add another</mat-checkbox>
+</div>

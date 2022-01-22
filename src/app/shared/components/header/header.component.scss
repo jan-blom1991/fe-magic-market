@@ -1,0 +1,25 @@
+@import "theme-variables";
+
+mat-toolbar {
+  background-color: mat-color($light-primary, 600);
+  border-bottom: 4px solid mat-color($light-primary, 400);
+}
+
+.mat-icon-button {
+  border-radius: 4px;
+}
+
+.toolbar {
+  display: flex;
+  width: 90rem;
+  margin: auto;
+  align-items: center;
+}
+
+.toolbar-logo {
+  margin: 0 1rem;
+}
+
+.toolbar-button {
+  margin: 0 1rem;
+}
